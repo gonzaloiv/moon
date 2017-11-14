@@ -1,14 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameStates;
 
-public class GameController : MonoBehaviour {
+public class GameController : StateMachine {
 
-	#region Mono Behaviour
+    #region Fields / Properties
 
-	void Start () {
-		Debug.Log ("First commit!");
-	}
+    [SerializeField] private GameObject mainMenuScreen;
+    [SerializeField] private GameObject levelScreen;
 
-	#endregion
+    public GameObject MainMenuScreen { get { return mainMenuScreen; } }
+    public GameObject LevelScreen { get { return levelScreen; } }
+
+    #endregion
+
+    #region Mono Behaviour
+
+    void Start () {
+        ChangeState<InitState>();		
+    }
+
+    #endregion
+
+    #region Public Behaviour
+
+    public void ToMainMenuState () {
+        ChangeState<MainMenuState>();
+    }
+
+    public void ToLevelState () {
+        ChangeState<LevelState>();
+    }
+
+    #endregion
+
 }
