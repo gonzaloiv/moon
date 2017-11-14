@@ -7,7 +7,6 @@ public class GameConfig {
 
     #region Fields / Properties
 
-    // Game
     public static int TimeScale;
 
     #endregion

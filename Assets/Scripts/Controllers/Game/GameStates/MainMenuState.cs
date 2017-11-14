@@ -31,7 +31,6 @@ namespace GameStates {
         }
 
         protected override void RemoveListeners () {
-            
             MainMenuScreenController.StartButtonClickEvent += OnStartButtonClickEvent;
         }
 
