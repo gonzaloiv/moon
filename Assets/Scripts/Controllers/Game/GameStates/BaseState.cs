@@ -9,10 +9,11 @@ namespace GameStates {
         #region Fields
 
         protected GameController gameController;
-        protected Game game;
+        protected GameData gameData;
         protected LevelController levelController;
         protected GameObject levelScreen;
         protected GameObject mainMenuScreen;
+        protected Game game;
 
         #endregion
 
@@ -20,10 +21,11 @@ namespace GameStates {
 
         void Awake () {
             gameController = GetComponent<GameController>();
-            game = gameController.Game;
+            gameData = gameController.GameData;
             levelController = gameController.LevelController;
             levelScreen = gameController.LevelScreen;
             mainMenuScreen = gameController.MainMenuScreen;
+            game = gameController.Game;
         }
 
         #endregion

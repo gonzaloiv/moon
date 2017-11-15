@@ -11,7 +11,8 @@ namespace GameStates {
         public override void Enter () {
             base.Enter();
             levelScreen.SetActive(true);
-            levelController.InitLevel(game.CurrentLevel);
+            game.Init(new Player(GameConfig.PlayerInitialLives)); // This state is active until the end of the play.
+            levelController.InitLevel(gameData, game);
         }
 
         public override void Exit () {

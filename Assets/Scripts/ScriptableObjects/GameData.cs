@@ -7,7 +7,15 @@ public class GameData : ScriptableObject {
 
     #region Fields / Properties
 
-    public List<LevelData> Levels;
+    [SerializeField] private List<LevelData> levels;
+
+    #endregion
+
+    #region Public Behaviour
+
+    public LevelData GetLevelData (int levelIndex) {
+        return levels[levelIndex];
+    }
 
     #endregion
 

@@ -8,4 +8,7 @@ public class GameConfigData : ScriptableObject {
 	[Header("Game")]
 	public int TimeScale = 1;
 
+    [Header("Player")]
+    public int PlayerInitialLives = 3;
+
 }

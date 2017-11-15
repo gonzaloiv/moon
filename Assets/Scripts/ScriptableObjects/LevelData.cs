@@ -7,6 +7,8 @@ public class LevelData : ScriptableObject {
 
     #region Fields / Properties
 
+    public Vector2 PlayerInitialPosition;
+    public int PlayerMovementsAmount;
     public List<Planet> Planets;
 
     #endregion

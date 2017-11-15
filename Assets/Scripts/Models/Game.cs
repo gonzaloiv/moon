@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game {
+public class Game { // Works as a data provider for Game and Level controllers
 
     #region Fields / Properties
 
-    public LevelData CurrentLevel { get { return levels[currentLevelIndex]; } } 
+    public Player Player { get { return player; } } 
+    public int CurrentLevelIndex { get { return currentLevelIndex; } } // TODO: Including here a Level class containing the points on the GDD
 
-    private List<LevelData> levels;
-    private int currentLevelIndex = 0;
+    private Player player;
+    private int currentLevelIndex;
 
     #endregion
 
     #region Public Behaviour
 
-    public Game(List<LevelData> levels) {
-        this.levels = levels;
+    public void Init (Player player) {
+        this.player = player;
+        currentLevelIndex = 0;
     }
 
     public void IncreaseCurrentLevelIndex() {
@@ -28,5 +30,5 @@ public class Game {
     }
 
     #endregion
-
+	
 }

@@ -8,6 +8,7 @@ public class GameConfig {
     #region Fields / Properties
 
     public static int TimeScale;
+    public static int PlayerInitialLives;
 
     #endregion
 
@@ -15,6 +16,7 @@ public class GameConfig {
 
     public static void Init (GameConfigData gameConfigData) {
         TimeScale = gameConfigData.TimeScale;
+        PlayerInitialLives = gameConfigData.PlayerInitialLives;
     }
 
     #endregion

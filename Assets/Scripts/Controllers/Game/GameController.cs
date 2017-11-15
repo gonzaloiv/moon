@@ -12,23 +12,20 @@ public class GameController : StateMachine {
     [SerializeField] private GameObject mainMenuScreen;
     [SerializeField] private GameObject levelScreen;
 
-    public Game Game { get { return game; } }
+    public GameData GameData { get { return gameData; } }
     public LevelController LevelController { get { return levelController; } }
     public GameObject MainMenuScreen { get { return mainMenuScreen; } }
     public GameObject LevelScreen { get { return levelScreen; } }
+    public Game Game {  get { return game; } }
 
-    private Game game;
+    private Game game = new Game();
 
     #endregion
 
     #region Mono Behaviour
 
-    void Awake() {
-        game = new Game(gameData.Levels);
-    }
-
     void Start () {
-        ChangeState<InitState>();		
+        ChangeState<InitState>();
     }
 
     #endregion

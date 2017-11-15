@@ -11,14 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515104fe1568e42d18ea07830c2cb9c3, type: 3}
   m_Name: Level01
   m_EditorClassIdentifier: 
+  PlayerInitialPosition: {x: 0, y: -3}
   Planets:
-  - prefab: {fileID: 1493507281984466, guid: 06cae39c8d834452f9b8b60b362d9e23, type: 2}
+  - prefab: {fileID: 1969062789316340, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: 100
-  - prefab: {fileID: 1134111830884408, guid: 8cf9a4aedf0e84a6d97a6ce24b41a4c5, type: 2}
+  - prefab: {fileID: 1346787983595604, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: 50
-  - prefab: {fileID: 1696590489164452, guid: 319b7494ea7bf48ee81f3c49a6464a90, type: 2}
+  - prefab: {fileID: 1575611499397724, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: -100
-  - prefab: {fileID: 1426735526936630, guid: 74c4c554feb2149d4bcefa1a4a949577, type: 2}
+  - prefab: {fileID: 1716483497119048, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: -50
-  - prefab: {fileID: 1164899831844504, guid: 05b037db383504a668b1d6fda78af8dc, type: 2}
+  - prefab: {fileID: 1552033671589584, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: 200

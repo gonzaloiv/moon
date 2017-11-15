@@ -7,21 +7,24 @@ public class PlanetController : MonoBehaviour {
     #region Fields / Properties
 
     private float speed;
+    private GameObject player;
 
     #endregion
 
     #region Mono Behaviour
 
-    void Update() {
+    void Update () {
         transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        player.GetComponent<Rigidbody2D>().AddForce((transform.position - player.transform.position) * transform.localScale.x * 0.01f);
     }
 
     #endregion
 
     #region Public Behaviour
 
-    public void Init(float speed) {
+    public void Init (float speed, GameObject player) {
         this.speed = speed;
+        this.player = player;
     }
 
     #endregion
