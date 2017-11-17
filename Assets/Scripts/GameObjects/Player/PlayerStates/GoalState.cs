@@ -10,7 +10,8 @@ namespace PlayerStates {
 
         public override void Enter () {
             base.Enter();
-            Debug.Log("GoalState.Enter()");
+            playerController.InvokeGoalEvent();
+            Debug.Log("GoalState");
         }
 
         #endregion

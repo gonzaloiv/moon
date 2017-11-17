@@ -15,7 +15,7 @@ public class PlanetController : MonoBehaviour {
 
     void Update () {
         transform.Rotate(Vector3.forward * speed * Time.deltaTime);
-        player.GetComponent<Rigidbody2D>().AddForce((transform.position - player.transform.position) * transform.localScale.x * 0.01f);
+        player.GetComponent<Rigidbody2D>().AddForce((transform.position - player.transform.position) * transform.localScale.x * GameConfig.PlanetGravityStrength);
     }
 
     #endregion

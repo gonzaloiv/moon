@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba71490c00d84dfab960f8562ace3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   playerSpawner: {fileID: 114662085981360620}
   planetSpawner: {fileID: 114519709276907522}
 --- !u!114 &114519709276907522
@@ -222,6 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 9d5adf1ed132943a6acdc2712688e69e, type: 2}
+  gameConfigData: {fileID: 11400000, guid: b509aef494a9848a89d491dff6c9688f, type: 2}
   levelController: {fileID: 114087829068487814}
   mainMenuScreen: {fileID: 0}
   levelScreen: {fileID: 0}

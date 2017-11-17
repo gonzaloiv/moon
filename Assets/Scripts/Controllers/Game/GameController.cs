@@ -8,11 +8,13 @@ public class GameController : StateMachine {
     #region Fields / Properties
 
     [SerializeField] private GameData gameData;
+    [SerializeField] private GameConfigData gameConfigData;
     [SerializeField] private LevelController levelController;
     [SerializeField] private GameObject mainMenuScreen;
     [SerializeField] private GameObject levelScreen;
 
     public GameData GameData { get { return gameData; } }
+    public GameConfigData GameConfigData { get { return gameConfigData; } }
     public LevelController LevelController { get { return levelController; } }
     public GameObject MainMenuScreen { get { return mainMenuScreen; } }
     public GameObject LevelScreen { get { return levelScreen; } }

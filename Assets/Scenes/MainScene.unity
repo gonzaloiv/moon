@@ -224,11 +224,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114087829068487814, guid: 0414bf70be4c742fa8952373f05763fb,
+    - target: {fileID: 114274276335735262, guid: 0414bf70be4c742fa8952373f05763fb,
         type: 2}
-      propertyPath: levelScreenController
+      propertyPath: cam
       value: 
-      objectReference: {fileID: 119093930}
+      objectReference: {fileID: 1410829240}
     - target: {fileID: 114841683915651456, guid: 0414bf70be4c742fa8952373f05763fb,
         type: 2}
       propertyPath: mainMenuScreen
@@ -239,6 +239,11 @@ Prefab:
       propertyPath: levelScreen
       value: 
       objectReference: {fileID: 119093928}
+    - target: {fileID: 114087829068487814, guid: 0414bf70be4c742fa8952373f05763fb,
+        type: 2}
+      propertyPath: levelScreenController
+      value: 
+      objectReference: {fileID: 119093930}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0414bf70be4c742fa8952373f05763fb, type: 2}
   m_IsPrefabParent: 0

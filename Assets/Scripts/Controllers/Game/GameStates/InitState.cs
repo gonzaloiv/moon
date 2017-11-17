@@ -20,6 +20,7 @@ namespace GameStates {
 
         private IEnumerator InitRoutine () {
             yield return null;
+            GameConfig.Init(gameConfigData);
             gameController.ToMainMenuState();
         }
 

@@ -10,5 +10,10 @@ public class GameConfigData : ScriptableObject {
 
     [Header("Player")]
     public int PlayerInitialLives = 3;
+    public float PlayerMaxDragDistance = 1;
+    public float PlayerSpeed = 3;
+
+    [Header("Planet")]
+    public float PlanetGravityStrength = 0.03f;
 
 }

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 4226350020143206}
   - component: {fileID: 212463421439011772}
   - component: {fileID: 114860850236868664}
+  - component: {fileID: 114747805960943072}
   m_Layer: 0
   m_Name: Planet04
   m_TagString: Untagged
@@ -225,6 +226,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23437163c617c4106b70c71912af505d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114747805960943072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716483497119048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6772a9e33506422eac1a81666a15022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114860850236868664
@@ -372,7 +384,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 38a78658a75144529a1ae044c1a37c4a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.8068966, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

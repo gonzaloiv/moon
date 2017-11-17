@@ -13,9 +13,10 @@ public class PlayerSpawner : MonoBehaviour {
 
     #region Public Behaviour
 
-    public GameObject SpawnPlayer (Vector2 initialPosition) {
+    public GameObject SpawnPlayer (Vector2 initialPosition, Camera cam) {
         GameObject player = Instantiate(playerPrefab, transform);
         player.transform.position = initialPosition;
+        player.GetComponent<PlayerController>().Init(cam);
         return player;
     }
 

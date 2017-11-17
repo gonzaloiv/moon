@@ -10,6 +10,7 @@ namespace GameStates {
 
         protected GameController gameController;
         protected GameData gameData;
+        protected GameConfigData gameConfigData;
         protected LevelController levelController;
         protected GameObject levelScreen;
         protected GameObject mainMenuScreen;
@@ -22,6 +23,7 @@ namespace GameStates {
         void Awake () {
             gameController = GetComponent<GameController>();
             gameData = gameController.GameData;
+            gameConfigData = gameController.GameConfigData;
             levelController = gameController.LevelController;
             levelScreen = gameController.LevelScreen;
             mainMenuScreen = gameController.MainMenuScreen;

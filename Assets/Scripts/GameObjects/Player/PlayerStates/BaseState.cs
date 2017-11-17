@@ -10,6 +10,8 @@ namespace PlayerStates {
 
         protected PlayerController playerController;
         protected Rigidbody2D rb;
+        protected Renderer rend;
+        protected Camera cam;
 
         #endregion
 
@@ -18,6 +20,8 @@ namespace PlayerStates {
         void Awake () {
             playerController = GetComponent<PlayerController>();
             rb = GetComponent<Rigidbody2D>();
+            rend = GetComponent<Renderer>();
+            cam = playerController.Cam;
         }
 
         #endregion
