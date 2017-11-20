@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenuScreenController : MonoBehaviour {
+public class MainMenuScreenController : BaseScreenController {
 
     #region Fields / Properties
 
@@ -28,7 +28,7 @@ public class MainMenuScreenController : MonoBehaviour {
 
     #region Public Behaviour
 
-    public void InvokeStartButtonClickEvent() {
+    public void InvokeStartButtonClickEvent () {
         StartButtonClickEvent.Invoke();
     }
 

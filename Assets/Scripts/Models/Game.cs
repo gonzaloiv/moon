@@ -7,8 +7,9 @@ public class Game { // Works as a data provider for Game and Level controllers
     #region Fields / Properties
 
     public Player Player { get { return player; } } 
-    public int CurrentLevelIndex { get { return currentLevelIndex; } } // TODO: Including here a Level class containing the points on the GDD
+    public LevelData CurrentLevelData { get { return gameData.GetLevelData(currentLevelIndex); } }
 
+    private GameData gameData;
     private Player player;
     private int currentLevelIndex;
 
@@ -16,9 +17,10 @@ public class Game { // Works as a data provider for Game and Level controllers
 
     #region Public Behaviour
 
-    public void Init (Player player) {
-        this.player = player;
-        currentLevelIndex = 0;
+    public void Init (GameData gameData) {
+        this.gameData = gameData;
+        this.player = new Player(gameData.PlayerInitialLives);
+        currentLevelIndex = 0; // TODO: Loading from saved games
     }
 
     public void IncreaseCurrentLevelIndex() {

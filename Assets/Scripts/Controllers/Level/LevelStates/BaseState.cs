@@ -11,6 +11,8 @@ namespace LevelStates {
         protected LevelController levelController;
         protected LevelScreenController levelScreenController;
         protected LevelSpawner levelSpawner;
+        protected Game game;
+        protected LevelData currentLevelData { get { return game.CurrentLevelData; } }
 
         #endregion
 
@@ -20,6 +22,7 @@ namespace LevelStates {
             levelController = GetComponent<LevelController>();
             levelScreenController = levelController.LevelScreenController;
             levelSpawner = levelController.LevelSpawner;
+            game = levelController.Game;
         }
 
         #endregion

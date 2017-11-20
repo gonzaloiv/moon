@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   TimeScale: 1
-  PlayerInitialLives: 3
+  CameraInitialPosition: {x: 0, y: 0, z: -10}
+  CameraSpeed: 1
   PlayerMaxDragDistance: 1
-  PlayerSpeed: 100
+  PlayerSpeed: 150
+  PlanetGravityStrength: 1
+  PlanetGravityDistanceRatio: 2

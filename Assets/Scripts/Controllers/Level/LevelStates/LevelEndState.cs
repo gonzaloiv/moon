@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PlayerStates {
+namespace LevelStates {
 
-    public class GoalState : BaseState {
+    public class LevelEndState : BaseState {
 
         #region Public Behaviour
 
         public override void Enter () {
             base.Enter();
-            playerController.InvokePlayerGoalEvent();
+            Debug.Log("LevelEndState.Enter()");
         }
 
         #endregion
-        
+
     }
 
 }

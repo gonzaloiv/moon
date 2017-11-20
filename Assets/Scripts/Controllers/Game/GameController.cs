@@ -10,15 +10,13 @@ public class GameController : StateMachine {
     [SerializeField] private GameData gameData;
     [SerializeField] private GameConfigData gameConfigData;
     [SerializeField] private LevelController levelController;
-    [SerializeField] private GameObject mainMenuScreen;
-    [SerializeField] private GameObject levelScreen;
+    [SerializeField] private MainMenuScreenController mainMenuScreenController;
 
     public GameData GameData { get { return gameData; } }
     public GameConfigData GameConfigData { get { return gameConfigData; } }
     public LevelController LevelController { get { return levelController; } }
-    public GameObject MainMenuScreen { get { return mainMenuScreen; } }
-    public GameObject LevelScreen { get { return levelScreen; } }
-    public Game Game {  get { return game; } }
+    public MainMenuScreenController MainMenuScreenController { get { return mainMenuScreenController; } }
+    public Game Game { get { return game; } }
 
     private Game game = new Game();
 

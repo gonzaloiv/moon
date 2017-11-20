@@ -10,14 +10,13 @@ namespace GameStates {
 
         public override void Enter () {
             base.Enter();
-            levelScreen.SetActive(true);
-            game.Init(new Player(GameConfig.PlayerInitialLives)); // This state is active until the end of the play.
-            levelController.InitLevel(gameData, game);
+            game.Init(gameData); // This state is active until the end of the play.
+            levelController.Init(game);
         }
 
         public override void Exit () {
             base.Exit();
-            levelScreen.SetActive(false);
+            levelController.Disable();
         }
 
         #endregion

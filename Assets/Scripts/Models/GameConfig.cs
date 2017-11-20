@@ -10,13 +10,17 @@ public static class GameConfig {
     // Game
     public static int TimeScale;
 
+    // Camera
+    public static float CameraSpeed;
+    public static Vector3 CameraInitialPosition;
+
     // Player
-    public static int PlayerInitialLives;
     public static float PlayerMaxDragDistance;
     public static  float PlayerSpeed;
 
     // Planet
     public static float PlanetGravityStrength;
+    public static float PlanetGravityDistanceRatio;
 
     #endregion
 
@@ -24,10 +28,12 @@ public static class GameConfig {
 
     public static void Init (GameConfigData gameConfigData) {
         TimeScale = gameConfigData.TimeScale;
-        PlayerInitialLives = gameConfigData.PlayerInitialLives;
+        CameraSpeed = gameConfigData.CameraSpeed;
+        CameraInitialPosition = gameConfigData.CameraInitialPosition;
         PlayerMaxDragDistance = gameConfigData.PlayerMaxDragDistance;
         PlayerSpeed = gameConfigData.PlayerSpeed;
         PlanetGravityStrength = gameConfigData.PlanetGravityStrength;
+        PlanetGravityDistanceRatio = gameConfigData.PlanetGravityDistanceRatio;
     }
 
     #endregion

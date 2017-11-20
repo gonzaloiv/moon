@@ -14,8 +14,11 @@ public class PlayerController : StateMachine {
 
     #region Events
 
-    public delegate void GoalEventHandler ();
-    public static event GoalEventHandler GoalEvent = delegate {};
+    public delegate void PlayerGoalEventHandler ();
+    public static event PlayerGoalEventHandler PlayerGoalEvent = delegate {};
+
+    public delegate void PlayerHitEventHandler ();
+    public static event PlayerHitEventHandler PlayerHitEvent = delegate {};
 
     #endregion
 
@@ -29,8 +32,8 @@ public class PlayerController : StateMachine {
 
     #region Public Behaviour
 
-    public void Init (Camera cam) {
-        this.cam = cam;
+    public void Init (GameObject cam) {
+        this.cam = cam.GetComponent<Camera>();
     }
 
     public void ToIdleState () {
@@ -53,8 +56,12 @@ public class PlayerController : StateMachine {
         ChangeState<GoalState>();
     }
 
-    public void InvokeGoalEvent () {
-        GoalEvent.Invoke();
+    public void InvokePlayerGoalEvent () {
+        PlayerGoalEvent.Invoke();
+    }
+
+    public void InvokePlayerHitEvent () {
+        PlayerHitEvent.Invoke();
     }
 
     #endregion

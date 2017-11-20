@@ -33,7 +33,7 @@ namespace PlayerStates {
         #region Private Behaviour
 
         private IEnumerator MoveRoutine () { // Temporary auto exit routine
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
             playerController.ToIdleState();
         }
 

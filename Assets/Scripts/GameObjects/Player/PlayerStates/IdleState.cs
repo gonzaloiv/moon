@@ -29,7 +29,7 @@ namespace PlayerStates {
             StartCoroutine(IdleRoutine());
         }
 
-        public override void Exit() {
+        public override void Exit () {
             base.Exit();
             StopAllCoroutines();
         }
@@ -38,9 +38,10 @@ namespace PlayerStates {
 
         #region Private Behaviour
 
-        private IEnumerator IdleRoutine() {
-            while(gameObject.activeInHierarchy) {
-                transform.DOShakeScale(ANIMATION_TIME, 0.1f);
+        private IEnumerator IdleRoutine () {
+            while (gameObject.activeInHierarchy) {
+                if (rb.velocity == Vector2.zero)
+                    transform.DOShakeScale(ANIMATION_TIME, 0.1f);
                 yield return new WaitForSeconds(ANIMATION_TIME * 2);
             }
         }

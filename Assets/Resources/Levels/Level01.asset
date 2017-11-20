@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Name: Level01
   m_EditorClassIdentifier: 
   PlayerInitialPosition: {x: 0, y: -3}
+  PlayerMovementsAmount: 0
+  Goal:
+    prefab: {fileID: 1716483497119048, guid: eabb42b990b254299a14f8b634895759, type: 2}
+    speed: 50
   Planets:
   - prefab: {fileID: 1969062789316340, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: 100
@@ -19,7 +23,5 @@ MonoBehaviour:
     speed: 50
   - prefab: {fileID: 1575611499397724, guid: eabb42b990b254299a14f8b634895759, type: 2}
     speed: -100
-  - prefab: {fileID: 1716483497119048, guid: eabb42b990b254299a14f8b634895759, type: 2}
-    speed: -50
   - prefab: {fileID: 1552033671589584, guid: eabb42b990b254299a14f8b634895759, type: 2}
-    speed: 200
+    speed: -50

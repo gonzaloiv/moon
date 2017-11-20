@@ -8,8 +8,8 @@ namespace LevelStates {
 
         #region Public Behaviour
 
-        public void OnGoalEvent() {
-            levelController.ToLevelEndState();            
+        public void OnPlayerGoalEvent () {
+            levelController.ToLevelEndState();
         }
 
         #endregion
@@ -17,11 +17,11 @@ namespace LevelStates {
         #region Protected Behaviour
 
         protected override void AddListeners () {
-            PlayerController.GoalEvent += OnGoalEvent;
+            PlayerController.PlayerGoalEvent += OnPlayerGoalEvent;
         }
 
         protected override void RemoveListeners () {
-            PlayerController.GoalEvent += OnGoalEvent;
+            PlayerController.PlayerGoalEvent += OnPlayerGoalEvent;
         }
 
         #endregion

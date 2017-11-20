@@ -13,14 +13,15 @@ public class PlanetSpawner : MonoBehaviour {
 
     #region Public Behaviour
 
-    public void SpawnPlanets (List<Planet> planets, GameObject player) {
+    public List<GameObject> SpawnPlanets (List<Planet> planets, GameObject player, GameObject goal) {
         currentPlanets = new List<GameObject>();
-        planets.ForEach(planet => currentPlanets.Add(SpawnPlanet(planet, player)));
+        planets.ForEach(planet => currentPlanets.Add(SpawnPlanet(planet, player, goal)));
+        return currentPlanets;
     }
 
-    public GameObject SpawnPlanet (Planet planet, GameObject player) {
+    public GameObject SpawnPlanet (Planet planet, GameObject player, GameObject goal = null) {
         GameObject currentPlanet = Instantiate(planet.Prefab, transform);
-        currentPlanet.GetComponent<PlanetController>().Init(planet.Speed, player);
+        currentPlanet.GetComponent<PlanetController>().Init(planet.Speed, player, goal);
         return currentPlanet;
     }
 

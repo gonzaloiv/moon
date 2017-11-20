@@ -10,7 +10,7 @@ namespace PlayerStates {
 
         public override void Enter () {
             base.Enter();
-            Debug.Log("Player says: Ouch!");
+            playerController.InvokePlayerHitEvent();
         }
 
         #endregion

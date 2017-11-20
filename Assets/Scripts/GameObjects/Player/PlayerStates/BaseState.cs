@@ -10,6 +10,7 @@ namespace PlayerStates {
 
         protected PlayerController playerController;
         protected Rigidbody2D rb;
+        protected Collider2D col;
         protected Renderer rend;
         protected Camera cam;
 
@@ -20,6 +21,7 @@ namespace PlayerStates {
         void Awake () {
             playerController = GetComponent<PlayerController>();
             rb = GetComponent<Rigidbody2D>();
+            col = GetComponent<Collider2D>();
             rend = GetComponent<Renderer>();
             cam = playerController.Cam;
         }
@@ -36,6 +38,15 @@ namespace PlayerStates {
         public override void Exit () {
             base.Exit();
             this.enabled = false;
+        }
+
+        #endregion
+
+        #region Protected Behaviour
+
+        protected void TogglePhysics () {
+            rb.simulated = !rb.simulated;
+            col.enabled = !col.enabled;
         }
 
         #endregion

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[Serializable] public class Planet { // TODO: Should contain children or orbits or something...
+[Serializable] public class Planet {
 
     #region Fields / Properties
 

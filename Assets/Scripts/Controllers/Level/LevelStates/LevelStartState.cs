@@ -10,6 +10,8 @@ namespace LevelStates {
 
         public override void Enter () {
             base.Enter();
+            levelScreenController.Show(currentLevelData);
+            levelSpawner.SpawnLevel(currentLevelData);
             StartCoroutine(LevelStartRoutine());
         }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace GameStates {
 
+    // The only purpose of the State is loading local or global data and initializing the game from it
     public class InitState : BaseState {
 
         #region Public Behaviour
@@ -25,8 +26,8 @@ namespace GameStates {
         }
 
         private void DisableGameScreens () {
-            levelScreen.SetActive(false);
-            mainMenuScreen.SetActive(false);
+            levelController.Disable();
+            mainMenuScreenController.Hide();
         }
 
         #endregion

@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenController : MonoBehaviour {
 
-	#region Mono Behaviour
+    #region Mono Behaviour
 
-	void Start() {
-		Debug.Log ("Loading MainScene...");
-		SceneManager.LoadScene ((int) GameScene.Main);
-	}
+    void Start () {
+        Debug.Log("Loading MainScene...");
+        SceneManager.LoadScene((int) GameScene.Main);
+    }
 
-	#endregion
+    #endregion
 
 }

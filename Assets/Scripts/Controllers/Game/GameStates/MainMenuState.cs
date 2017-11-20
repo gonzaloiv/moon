@@ -10,12 +10,12 @@ namespace GameStates {
 
         public override void Enter () {
             base.Enter();
-            mainMenuScreen.SetActive(true);
+            mainMenuScreenController.Show();
         }
 
         public override void Exit () {
             base.Exit();
-            mainMenuScreen.SetActive(false);
+            mainMenuScreenController.Hide();
         }
 
         public void OnStartButtonClickEvent () {

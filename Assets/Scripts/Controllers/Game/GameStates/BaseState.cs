@@ -12,8 +12,7 @@ namespace GameStates {
         protected GameData gameData;
         protected GameConfigData gameConfigData;
         protected LevelController levelController;
-        protected GameObject levelScreen;
-        protected GameObject mainMenuScreen;
+        protected MainMenuScreenController mainMenuScreenController;
         protected Game game;
 
         #endregion
@@ -25,8 +24,7 @@ namespace GameStates {
             gameData = gameController.GameData;
             gameConfigData = gameController.GameConfigData;
             levelController = gameController.LevelController;
-            levelScreen = gameController.LevelScreen;
-            mainMenuScreen = gameController.MainMenuScreen;
+            mainMenuScreenController = gameController.MainMenuScreenController;
             game = gameController.Game;
         }
 

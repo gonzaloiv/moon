@@ -26,8 +26,6 @@ namespace PlayerStates {
         }
 
         void OnMouseUp () {
-            rb.AddForce((initialPosition - transform.position) * GameConfig.PlayerSpeed);
-            rend.material.DOFade(1f, ANIMATION_TIME);
             playerController.ToMoveState();
         }
 
@@ -37,13 +35,21 @@ namespace PlayerStates {
 
         public override void Enter () {
             base.Enter();
-            rend.material.DOFade(0.6f, ANIMATION_TIME); // TODO: Defining color rules on GameConfig
+            TogglePhysics();
+            rend.material.DOFade(0.6f, ANIMATION_TIME); // TODO: Defining color rules on a config file
             initialPosition = transform.position;
             initialMousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
+        public override void Exit () {
+            base.Exit();
+            TogglePhysics();
+            rend.material.DOFade(1f, ANIMATION_TIME);
+            rb.AddForce((initialPosition - transform.position) * GameConfig.PlayerSpeed);
+        }
+
         #endregion
-	
+
     }
 
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LevelStates;
 
-public class LevelController : StateMachine {
+public class LevelController : StateMachine { // Takes care of every action during playtime, and between levels too
 
     #region Fields / Properties
 
@@ -12,32 +12,37 @@ public class LevelController : StateMachine {
 
     public LevelScreenController LevelScreenController { get { return levelScreenController; } }
     public LevelSpawner LevelSpawner { get { return levelSpawner; } }
+    public Game Game { get { return game; } }
+
+    private Game game;
 
     #endregion
 
     #region Public Behaviour
 
-    // Game should work as an independent module, maybe listening to the GameObjects events by itself
-    // And then everything related to level indexes would be a LevelController dependent class (Level?)
-    public void InitLevel (GameData gameData, Game game) { // TODO: Level model Generation
-        LevelData currentLevelData = gameData.GetLevelData(game.CurrentLevelIndex);
-        levelScreenController.Init(currentLevelData);
-        levelSpawner.SpawnLevel(currentLevelData);
+    public void Init (Game game) { // Wouldn't it be nicer a InitState ?
+        this.game = game;
+        gameObject.SetActive(true);
         ToLevelStartState();
     }
 
-    public void ToLevelStartState() {
+    public void Disable() { // Temporary naming...
+        gameObject.SetActive(false);
+        levelScreenController.Hide();
+    }
+
+    public void ToLevelStartState () {
         ChangeState<LevelStartState>();
     }
 
-    public void ToLevelState() {
+    public void ToLevelState () {
         ChangeState<LevelState>();
     }
 
-    public void ToLevelEndState() {
+    public void ToLevelEndState () {
         ChangeState<LevelEndState>();
     }
 
     #endregion
-	
+
 }
